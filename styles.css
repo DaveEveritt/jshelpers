@@ -1,0 +1,38 @@
+/* base styles */
+body {
+  margin: 0;
+}
+main {
+  padding: 1em;
+  /* margin: 1em 1em 0 1em; */
+  transition: all 2s;
+  transition: all 2s;
+}
+h1 {
+  padding: 1em;
+  margin: 0;
+  transition: all 2s;
+}
+section {
+  padding: .25em;
+  margin: 1em;
+  transition: all 2s;
+}
+footer {
+  border-top: 3px solid #999;
+  padding: 0 1em;
+  background: #eee;
+  overflow: auto;
+}
+
+/* classes to add dynamically */
+.hilite {
+  background: yellow;
+}
+.standout {
+  background: #333;
+  color: #fcf;
+}
+.backme {
+  background: #c9c;
+}

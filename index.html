@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JS Utilities</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<h1 id="bighead">JS utilities: example</h1>
+
+<main>
+  <section>I'm boring 1…</section>
+  <section>I'm boring 2…</section>
+  <section>I'm boring 3…</section>
+  <button id="helpers">use helpers</button>
+</main>
+
+
+<script src="utilities.js"></script>
+
+<footer>
+  <p>
+    Helper functions adapted from Sebastian De Deyne, <cite>JavaScript Framework Diet</cite><br>
+    "<a href="https://sebastiandedeyne.com/javascript-framework-diet/selecting-elements-part-1/">Selecting elements (part 1)</a>"
+  </p>
+  <p>
+    Added helper for: <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/closest">Element.closest()</a>
+  </p>
+</footer>
+
+<script>
+  'use strict';
+  
+  // const helpers = id("helpers");
+  const myhead = id("bighead");
+  const mainpart = up($("main > section"), "main");
+  const els = $$("section");
+    
+  const usehelpers = () => {
+    myhead.classList.add("standout")
+    mainpart.classList.add("backme")
+    
+    els.forEach(el => {
+    	el.innerHTML = "Look at me!";
+    	el.classList.add("hilite");
+    });    
+  }
+  
+  helpers.addEventListener('click', usehelpers);
+  
+</script>
+
+</body>
+</html>
